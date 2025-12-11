@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home | Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <a href="index.html" class="logo">Sohail.</a>
+
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="skills.html">Skills</a>
+            <a href="projects.html">Projects</a>
+            <a href="experiences.html">Experiences</a>
+            <a href="certificates.html">Certificates</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="home">
+        <div class="home-content">
+            <h1>Hi, I'm Sohail Ahmed</h1>
+            <h3>I'm a <span class="multiple-text" style="color: #00c3ff;"></span></h3>
+            <p>I am a passionate Frontend Developer and ICT student with a strong interest in building user-friendly websites. I specialize in HTML, CSS, and JavaScript, always striving to create clean, responsive, and visually appealing web designs.</p>
+            
+            <div class="btn-box">
+                <a href="contact.html" class="btn">Hire Me</a>
+                <a href="contact.html" class="btn btn-outline">Let's Talk</a>
+            </div>
+
+            <div class="home-sci">
+                <a href="https://www.instagram.com/sohailahm13?igsh=MTE2MGg2Y3Fsd2h5NA=="><i class="fab fa-instagram"></i></a>    
+                <a href="https://wa.me/923240667442"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.linkedin.com/in/sohailahm13/"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.github.com/sohailahmedofficial13"><i class="fab fa-github"></i></a>
+                <a href="https://www.facebook.com/sohailahm13"><i class="fab fa-facebook-f"></i></a>
+            </div>
+        </div>
+
+        <div class="home-img">
+            <img src="Sohail Ahmed.png" alt="Profile Picture">
+        </div>
+    </section>
+
+    <script>
+        const textElement = document.querySelector(".multiple-text");
+        
+        const textArray = ["Frontend Developer"]; 
+        
+        let textIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+
+        function typeEffect() {
+            const currentText = textArray[textIndex];
+            
+            if (isDeleting) {
+                textElement.textContent = currentText.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                textElement.textContent = currentText.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            let typeSpeed = isDeleting ? 100 : 200; 
+
+            if (!isDeleting && charIndex === currentText.length) {
+                typeSpeed = 2000; 
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                textIndex++;
+                if (textIndex === textArray.length) textIndex = 0; 
+            }
+
+            setTimeout(typeEffect, typeSpeed);
+        }
+        
+        document.addEventListener('DOMContentLoaded', typeEffect);
+    </script>
+</body>
+</html>

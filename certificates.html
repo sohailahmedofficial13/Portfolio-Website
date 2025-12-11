@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Certificates | Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <a href="index.html" class="logo">Sohail.</a>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="skills.html">Skills</a>
+            <a href="projects.html">Projects</a>
+            <a href="experiences.html">Experiences</a>
+            <a href="certificates.html" style="color: #00c3ff;">Certificates</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section>
+        <div class="home-content">
+            <h1>My Certificates</h1>
+            <h3 style="color: #00c3ff;">Achievements & Awards</h3>
+            <p style="margin-bottom: 40px;">
+                Click the buttons below to view my Certificates.
+            </p>
+
+            <div>
+
+                <div style="border: 1px solid #1f2a3c; background-color: #0d121d; padding: 25px; border-radius: 15px; border-top: 5px solid #00c3ff; margin-bottom: 20px;">
+                    <div style="font-size: 40px; color: #00c3ff; margin-bottom: 15px;"><i class="fas fa-certificate"></i></div>
+                    <h2 style="font-size: 20px; color: white; margin-bottom: 5px;">Speaker of National Assembly</h2>
+                    <h4 style="font-size: 14px; color: #a9adb6; font-weight: 400; margin-bottom: 15px;">Model United Nations (MUN) - 2025</h4>
+                    <p style="font-size: 14px; color: #cccccc; margin-bottom: 20px;">Awarded for exceptional leadership and parliamentary procedure management during the MUN conference.</p>
+                    <button onclick="openModal('modal1')" class="btn" style="width: 100%; cursor: pointer;">View Certificates (2)</button>
+                </div>
+
+                <div style="border: 1px solid #1f2a3c; background-color: #0d121d; padding: 25px; border-radius: 15px; border-top: 5px solid #00c3ff; margin-bottom: 20px;">
+                    <div style="font-size: 40px; color: #00c3ff; margin-bottom: 15px;"><i class="fas fa-trophy"></i></div>
+                    <h2 style="font-size: 20px; color: white; margin-bottom: 5px;">Coding Competition Participation</h2>
+                    <h4 style="font-size: 14px; color: #a9adb6; font-weight: 400; margin-bottom: 15px;">FAST University Coder's Cup - 2025</h4>
+                    <p style="font-size: 14px; color: #cccccc; margin-bottom: 20px;">Certificate of participation for competing in the algorithmic speed programming contest using C++.</p>
+                    <button onclick="openModal('modal2')" class="btn" style="width: 100%; cursor: pointer;">View Certificate</button>
+                </div>
+
+                <div style="border: 1px solid #1f2a3c; background-color: #0d121d; padding: 25px; border-radius: 15px; border-top: 5px solid #00c3ff; margin-bottom: 20px;">
+                    <div style="font-size: 40px; color: #00c3ff; margin-bottom: 15px;"><i class="fas fa-microphone"></i></div>
+                    <h2 style="font-size: 20px; color: white; margin-bottom: 5px;">Best Speaker / Host</h2>
+                    <h4 style="font-size: 14px; color: #a9adb6; font-weight: 400; margin-bottom: 15px;">Inter-College Speech Competition</h4>
+                    <p style="font-size: 14px; color: #cccccc; margin-bottom: 20px;">Recognized for outstanding oratory skills and hosting college assemblies effectively.</p>
+                    <button onclick="openModal('modal3')" class="btn" style="width: 100%; cursor: pointer;">View Certificate</button>
+                </div>
+
+                <div style="border: 1px solid #1f2a3c; background-color: #0d121d; padding: 25px; border-radius: 15px; border-top: 5px solid #00c3ff; margin-bottom: 20px;">
+                    <div style="font-size: 40px; color: #00c3ff; margin-bottom: 15px;"><i class="fas fa-medal"></i></div>
+                    <h2 style="font-size: 20px; color: white; margin-bottom: 5px;">Sports Achievement</h2>
+                    <h4 style="font-size: 14px; color: #a9adb6; font-weight: 400; margin-bottom: 15px;">Inter-College Sports Tournament</h4>
+                    <p style="font-size: 14px; color: #cccccc; margin-bottom: 20px;">Certificate of appreciation for active participation and sportsmanship in annual sports events.</p>
+                    <button onclick="openModal('modal4')" class="btn" style="width: 100%; cursor: pointer;">View Certificates (2)</button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div id="modal1" class="modal">
+        <span class="close" onclick="closeModal('modal1')">&times;</span>
+        <img class="modal-content" src="Certificates Images/MUN-1.jpeg" alt="MUN Certificate 1">
+        <img class="modal-content" src="Certificates Images/MUN-2.jpeg" alt="MUN Certificate 2">
+        <div style="height: 50px;"></div> </div>
+
+    <div id="modal2" class="modal">
+        <span class="close" onclick="closeModal('modal2')">&times;</span>
+        <img class="modal-content" src="Certificates Images/Coder's Cup.jpeg" alt="Coding Certificate">
+    </div>
+
+    <div id="modal3" class="modal">
+        <span class="close" onclick="closeModal('modal3')">&times;</span>
+        <img class="modal-content" src="Certificates Images/Speech.jpeg" alt="Speaking Certificate">
+    </div>
+
+    <div id="modal4" class="modal">
+        <span class="close" onclick="closeModal('modal4')">&times;</span>
+        <img class="modal-content" src="Certificates Images/Sports-1.jpeg" alt="Sports Certificate 1">
+        <img class="modal-content" src="Certificates Images/Sports-2.jpeg" alt="Sports Certificate 2">
+        <div style="height: 50px;"></div> </div>
+
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+        }
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+        
+        window.onclick = function(event) {
+            if (event.target.className === 'modal') {
+                event.target.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
